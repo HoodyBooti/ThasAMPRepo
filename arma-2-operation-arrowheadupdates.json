@@ -1,0 +1,13 @@
+[
+    {
+        "UpdateStageName": "Install Arma 2 OA Dedicated Server",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "33930",
+        "UpdateSourceArgs": "33930",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    }
+]
