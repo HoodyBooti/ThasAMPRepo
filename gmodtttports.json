@@ -1,0 +1,9 @@
+[
+    {
+        "Protocol": "Both",
+        "Port": "27015",
+        "Name": "Game Port",
+        "Description": "Spiel- und RCON-Port (UDP/TCP)",
+        "Ref": "GamePort1"
+    }
+]

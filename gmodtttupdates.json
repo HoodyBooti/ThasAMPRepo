@@ -1,0 +1,13 @@
+[
+    {
+        "UpdateStageName": "Install Garry's Mod Dedicated Server",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "4020",
+        "UpdateSourceArgs": "4020",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    }
+]

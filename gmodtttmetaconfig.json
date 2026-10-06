@@ -1,6 +1,6 @@
 [
   {
-    "ConfigFile": "4020/garrysmod/cfg/server.cfg",
+    "ConfigFile": "garrysmod/cfg/server.cfg",
     "ConfigType": "kvp",
     "ConfigFormat": "{0} \"{1}\"",
     "Subsections": [
@@ -82,7 +82,7 @@
     ]
   },
   {
-    "ConfigFile": "4020/garrysmod/data/amp_ttt_weapons.txt",
+    "ConfigFile": "garrysmod/data/amp_ttt_weapons.txt",
     "ConfigType": "kvp",
     "ConfigFormat": "{0}={1}",
     "Subsections": [
