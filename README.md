@@ -36,6 +36,7 @@ unter `4020/garrysmod/` kopieren.
 * **Custom**: Workshop-Waffen ohne Generator-Lauf, z.B. `weapon_ttt_foo:traitor,weapon_ttt_bar:both`.
 * Weitere Waffen dauerhaft als GUI-Eintrag: in `generate.py` bei `WEAPONS` ergänzen und
   `OUT=. python3 generate.py` ausführen.
+* Kategorie-Namen werden auch als UI-Selektoren verwendet; deshalb enthalten sie kein `&` oder `:`.
 * Änderungen greifen nach Server-Neustart.
 
 ## Bekannte Einschränkungen / bitte testen

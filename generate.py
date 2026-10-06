@@ -51,7 +51,7 @@ def ttt(cat, rows):
         else:  # float -> text
             add(cat, name, cvar, desc, "text", default, cvar=cvar)
 
-ttt("TTT – Runden", [
+ttt("TTT - Runden", [
  ("ttt_round_limit", "Max. Runden pro Map", 6, "int"),
  ("ttt_time_limit_minutes", "Max. Zeit pro Map (Min.)", 75, "int"),
  ("ttt_roundtime_minutes", "Rundenzeit (Min.)", 10, "int"),
@@ -67,7 +67,7 @@ ttt("TTT – Runden", [
  ("ttt_no_nade_throw_during_prep", "Keine Granaten in der Vorbereitung", 0, "bool"),
  ("ttt_idle_limit", "Idle-Limit (Sek.)", 180, "int", "Danach Spectator/Kick."),
 ])
-ttt("TTT – Rollen & Credits", [
+ttt("TTT - Rollen und Credits", [
  ("ttt_traitor_pct", "Traitor-Anteil (0-1)", 0.25, "float"),
  ("ttt_traitor_max", "Max. Traitor", 32, "int"),
  ("ttt_detective_pct", "Detective-Anteil (0-1)", 0.13, "float"),
@@ -83,7 +83,7 @@ ttt("TTT – Rollen & Credits", [
  ("ttt_det_credits_traitorkill", "Detective-Credits pro Traitor-Kill", 0, "int"),
  ("ttt_det_credits_traitordead", "Detective-Credits bei Traitor-Tod", 1, "int"),
 ])
-ttt("TTT – Karma", [
+ttt("TTT - Karma", [
  ("ttt_karma", "Karma-System", 1, "bool"),
  ("ttt_karma_strict", "Striktes Karma", 1, "bool"),
  ("ttt_karma_starting", "Start-Karma", 1000, "int"),
@@ -101,7 +101,7 @@ ttt("TTT – Karma", [
  ("ttt_karma_low_ban_minutes", "Bandauer (Min.)", 60, "int"),
  ("ttt_karma_persist", "Karma speichern", 0, "bool"),
 ])
-ttt("TTT – Sonstiges", [
+ttt("TTT - Sonstiges", [
  ("ttt_voice_drain", "Voice-Drain", 0, "bool"),
  ("ttt_voice_drain_normal", "Voice-Drain normal", 0.2, "float"),
  ("ttt_voice_drain_admin", "Voice-Drain Admin", 0.05, "float"),
@@ -148,21 +148,21 @@ ITEMS = [("item_armor", "Körperpanzer"), ("item_radar", "Radar"), ("item_disgui
 
 for cls, nm in WEAPONS:
     f = "shop_" + cls
-    add("TTT – Waffen: Shop", nm, f, f"Wer kann „{nm}“ im Shop kaufen? [{cls}]", "enum", "default", EnumValues=SHOP)
+    add("TTT - Waffen Shop", nm, f, f"Wer kann „{nm}“ im Shop kaufen? [{cls}]", "enum", "default", EnumValues=SHOP)
     wepmap[f] = "shop." + cls
 for cls, nm in ITEMS:
     f = "shop_" + cls
-    add("TTT – Waffen: Shop", "Item: " + nm, f, f"Wer kann „{nm}“ kaufen? [{cls}]", "enum", "default", EnumValues=SHOP)
+    add("TTT - Waffen Shop", "Item: " + nm, f, f"Wer kann „{nm}“ kaufen? [{cls}]", "enum", "default", EnumValues=SHOP)
     wepmap[f] = "shop." + cls
 for cls, nm in WEAPONS:
     if cls in FLOOR_WEAPONS:
         f = "floor_" + cls
-        add("TTT – Waffen: Boden-Spawn", nm, f, f"Zufälliger Boden-Spawn für „{nm}“. [{cls}]", "enum", "default", EnumValues=FLOOR)
+        add("TTT - Waffen Boden-Spawn", nm, f, f"Zufälliger Boden-Spawn für „{nm}“. [{cls}]", "enum", "default", EnumValues=FLOOR)
         wepmap[f] = "floor." + cls
-add("TTT – Waffen: Custom", "Workshop-Waffen im Shop", "custom_shop",
+add("TTT - Waffen Custom", "Workshop-Waffen im Shop", "custom_shop",
     "Klasse:Modus, kommagetrennt. Modus = none|traitor|detective|both. Z.B. weapon_ttt_foo:traitor,weapon_ttt_bar:both",
     "text", "")
-add("TTT – Waffen: Custom", "Workshop-Waffen am Boden", "custom_floor",
+add("TTT - Waffen Custom", "Workshop-Waffen am Boden", "custom_floor",
     "Klasse:Modus, kommagetrennt. Modus = on|off. Z.B. weapon_ttt_foo:on", "text", "")
 wepmap["custom_shop"] = "custom.shop"; wepmap["custom_floor"] = "custom.floor"
 
