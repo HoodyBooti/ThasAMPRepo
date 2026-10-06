@@ -1,0 +1,1839 @@
+[
+  {
+    "DisplayName": "Servername",
+    "Description": "Name im Serverbrowser (hostname).",
+    "Keywords": "hostname",
+    "FieldName": "hostname",
+    "InputType": "text",
+    "Category": "Server",
+    "DefaultValue": "My TTT Server",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "hostname"
+  },
+  {
+    "DisplayName": "Startmap",
+    "Description": "Map beim Start (z.B. ttt_67thway_v14).",
+    "Keywords": "map",
+    "FieldName": "map",
+    "InputType": "text",
+    "Category": "Server",
+    "DefaultValue": "ttt_67thway_v14",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "map"
+  },
+  {
+    "DisplayName": "Server-Passwort",
+    "Description": "Leer = öffentlich.",
+    "Keywords": "sv_password",
+    "FieldName": "sv_password",
+    "InputType": "password",
+    "Category": "Server",
+    "DefaultValue": "",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "sv_password"
+  },
+  {
+    "DisplayName": "Region",
+    "Description": "Region im Serverbrowser.",
+    "Keywords": "sv_region",
+    "FieldName": "sv_region",
+    "InputType": "enum",
+    "Category": "Server",
+    "DefaultValue": "3",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "sv_region",
+    "EnumValues": {
+      "255": "Weltweit",
+      "0": "US-Ost",
+      "1": "US-West",
+      "2": "Südamerika",
+      "3": "Europa",
+      "4": "Asien",
+      "5": "Australien",
+      "6": "Naher Osten",
+      "7": "Afrika"
+    }
+  },
+  {
+    "DisplayName": "LAN-Modus",
+    "Description": "Nur LAN, nicht im Internet sichtbar.",
+    "Keywords": "sv_lan",
+    "FieldName": "sv_lan",
+    "InputType": "checkbox",
+    "Category": "Server",
+    "DefaultValue": "0",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "sv_lan",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Tickrate",
+    "Description": "Nur beim Start wirksam. 66 ist Standard.",
+    "Keywords": "tickrate",
+    "FieldName": "tickrate",
+    "InputType": "number",
+    "Category": "Server",
+    "DefaultValue": "66",
+    "IncludeInCommandLine": true,
+    "Hidden": false,
+    "ParamFieldName": "-tickrate",
+    "SkipIfEmpty": true,
+    "minValue": "16",
+    "maxValue": "128"
+  },
+  {
+    "DisplayName": "GSLT (Game Server Login Token)",
+    "Description": "Optional, https://steamcommunity.com/dev/managegameservers",
+    "Keywords": "sv_setsteamaccount",
+    "FieldName": "sv_setsteamaccount",
+    "InputType": "text",
+    "Category": "Server",
+    "DefaultValue": "",
+    "IncludeInCommandLine": true,
+    "Hidden": false,
+    "ParamFieldName": "+sv_setsteamaccount",
+    "SkipIfEmpty": true
+  },
+  {
+    "DisplayName": "Client-Lua erlauben",
+    "Description": "sv_allowcslua – für TTT normalerweise AUS.",
+    "Keywords": "sv_allowcslua",
+    "FieldName": "sv_allowcslua",
+    "InputType": "checkbox",
+    "Category": "Server",
+    "DefaultValue": "0",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "sv_allowcslua",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Voice aktiv",
+    "Description": "sv_voiceenable",
+    "Keywords": "sv_voiceenable",
+    "FieldName": "sv_voiceenable",
+    "InputType": "checkbox",
+    "Category": "Server",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "sv_voiceenable",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "FastDL URL",
+    "Description": "sv_downloadurl",
+    "Keywords": "sv_downloadurl",
+    "FieldName": "sv_downloadurl",
+    "InputType": "text",
+    "Category": "Server",
+    "DefaultValue": "",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "sv_downloadurl"
+  },
+  {
+    "DisplayName": "Loading-Screen URL",
+    "Description": "sv_loadingurl",
+    "Keywords": "sv_loadingurl",
+    "FieldName": "sv_loadingurl",
+    "InputType": "text",
+    "Category": "Server",
+    "DefaultValue": "",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "sv_loadingurl"
+  },
+  {
+    "DisplayName": "Workshop-Collection ID",
+    "Description": "host_workshop_collection – Collection mit Maps/Waffen.",
+    "Keywords": "workshop_collection",
+    "FieldName": "workshop_collection",
+    "InputType": "text",
+    "Category": "Workshop",
+    "DefaultValue": "",
+    "IncludeInCommandLine": true,
+    "Hidden": false,
+    "ParamFieldName": "+host_workshop_collection",
+    "SkipIfEmpty": true
+  },
+  {
+    "DisplayName": "Steam Web API Key",
+    "Description": "-authkey, nötig für Workshop-Collections.",
+    "Keywords": "authkey",
+    "FieldName": "authkey",
+    "InputType": "password",
+    "Category": "Workshop",
+    "DefaultValue": "",
+    "IncludeInCommandLine": true,
+    "Hidden": false,
+    "ParamFieldName": "-authkey",
+    "SkipIfEmpty": true
+  },
+  {
+    "DisplayName": "Max. Runden pro Map",
+    "Description": "Max. Runden pro Map  [ttt_round_limit]",
+    "Keywords": "ttt_round_limit",
+    "FieldName": "ttt_round_limit",
+    "InputType": "number",
+    "Category": "TTT – Runden",
+    "DefaultValue": "6",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_round_limit",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Max. Zeit pro Map (Min.)",
+    "Description": "Max. Zeit pro Map (Min.)  [ttt_time_limit_minutes]",
+    "Keywords": "ttt_time_limit_minutes",
+    "FieldName": "ttt_time_limit_minutes",
+    "InputType": "number",
+    "Category": "TTT – Runden",
+    "DefaultValue": "75",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_time_limit_minutes",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Rundenzeit (Min.)",
+    "Description": "Rundenzeit (Min.)  [ttt_roundtime_minutes]",
+    "Keywords": "ttt_roundtime_minutes",
+    "FieldName": "ttt_roundtime_minutes",
+    "InputType": "number",
+    "Category": "TTT – Runden",
+    "DefaultValue": "10",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_roundtime_minutes",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Vorbereitungszeit (Sek.)",
+    "Description": "Vorbereitungszeit (Sek.)  [ttt_preptime_seconds]",
+    "Keywords": "ttt_preptime_seconds",
+    "FieldName": "ttt_preptime_seconds",
+    "InputType": "number",
+    "Category": "TTT – Runden",
+    "DefaultValue": "30",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_preptime_seconds",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Erste Vorbereitung (Sek.)",
+    "Description": "Erste Vorbereitung (Sek.)  [ttt_firstpreptime]",
+    "Keywords": "ttt_firstpreptime",
+    "FieldName": "ttt_firstpreptime",
+    "InputType": "number",
+    "Category": "TTT – Runden",
+    "DefaultValue": "60",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_firstpreptime",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Nachrundenzeit (Sek.)",
+    "Description": "Nachrundenzeit (Sek.)  [ttt_posttime_seconds]",
+    "Keywords": "ttt_posttime_seconds",
+    "FieldName": "ttt_posttime_seconds",
+    "InputType": "number",
+    "Category": "TTT – Runden",
+    "DefaultValue": "30",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_posttime_seconds",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Haste-Modus",
+    "Description": "Jeder Tod verlängert die Runde.  [ttt_haste]",
+    "Keywords": "ttt_haste",
+    "FieldName": "ttt_haste",
+    "InputType": "checkbox",
+    "Category": "TTT – Runden",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_haste",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Haste: Startzeit (Min.)",
+    "Description": "Haste: Startzeit (Min.)  [ttt_haste_starting_minutes]",
+    "Keywords": "ttt_haste_starting_minutes",
+    "FieldName": "ttt_haste_starting_minutes",
+    "InputType": "number",
+    "Category": "TTT – Runden",
+    "DefaultValue": "5",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_haste_starting_minutes",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Haste: Min. pro Tod",
+    "Description": "Haste: Min. pro Tod  [ttt_haste_minutes_per_death]",
+    "Keywords": "ttt_haste_minutes_per_death",
+    "FieldName": "ttt_haste_minutes_per_death",
+    "InputType": "text",
+    "Category": "TTT – Runden",
+    "DefaultValue": "0.5",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_haste_minutes_per_death"
+  },
+  {
+    "DisplayName": "Mindestspieler",
+    "Description": "Mindestspieler  [ttt_minimum_players]",
+    "Keywords": "ttt_minimum_players",
+    "FieldName": "ttt_minimum_players",
+    "InputType": "number",
+    "Category": "TTT – Runden",
+    "DefaultValue": "2",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_minimum_players",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Immer Mapcycle",
+    "Description": "Immer Mapcycle  [ttt_always_use_mapcycle]",
+    "Keywords": "ttt_always_use_mapcycle",
+    "FieldName": "ttt_always_use_mapcycle",
+    "InputType": "checkbox",
+    "Category": "TTT – Runden",
+    "DefaultValue": "0",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_always_use_mapcycle",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Deathmatch nach der Runde",
+    "Description": "Deathmatch nach der Runde  [ttt_postround_dm]",
+    "Keywords": "ttt_postround_dm",
+    "FieldName": "ttt_postround_dm",
+    "InputType": "checkbox",
+    "Category": "TTT – Runden",
+    "DefaultValue": "0",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_postround_dm",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Keine Granaten in der Vorbereitung",
+    "Description": "Keine Granaten in der Vorbereitung  [ttt_no_nade_throw_during_prep]",
+    "Keywords": "ttt_no_nade_throw_during_prep",
+    "FieldName": "ttt_no_nade_throw_during_prep",
+    "InputType": "checkbox",
+    "Category": "TTT – Runden",
+    "DefaultValue": "0",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_no_nade_throw_during_prep",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Idle-Limit (Sek.)",
+    "Description": "Danach Spectator/Kick.  [ttt_idle_limit]",
+    "Keywords": "ttt_idle_limit",
+    "FieldName": "ttt_idle_limit",
+    "InputType": "number",
+    "Category": "TTT – Runden",
+    "DefaultValue": "180",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_idle_limit",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Traitor-Anteil (0-1)",
+    "Description": "Traitor-Anteil (0-1)  [ttt_traitor_pct]",
+    "Keywords": "ttt_traitor_pct",
+    "FieldName": "ttt_traitor_pct",
+    "InputType": "text",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "0.25",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_traitor_pct"
+  },
+  {
+    "DisplayName": "Max. Traitor",
+    "Description": "Max. Traitor  [ttt_traitor_max]",
+    "Keywords": "ttt_traitor_max",
+    "FieldName": "ttt_traitor_max",
+    "InputType": "number",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "32",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_traitor_max",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Detective-Anteil (0-1)",
+    "Description": "Detective-Anteil (0-1)  [ttt_detective_pct]",
+    "Keywords": "ttt_detective_pct",
+    "FieldName": "ttt_detective_pct",
+    "InputType": "text",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "0.13",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_detective_pct"
+  },
+  {
+    "DisplayName": "Max. Detectives",
+    "Description": "Max. Detectives  [ttt_detective_max]",
+    "Keywords": "ttt_detective_max",
+    "FieldName": "ttt_detective_max",
+    "InputType": "number",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "32",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_detective_max",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Min. Spieler für Detectives",
+    "Description": "Min. Spieler für Detectives  [ttt_detective_min_players]",
+    "Keywords": "ttt_detective_min_players",
+    "FieldName": "ttt_detective_min_players",
+    "InputType": "number",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "8",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_detective_min_players",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Min. Karma für Detective",
+    "Description": "Min. Karma für Detective  [ttt_detective_karma_min]",
+    "Keywords": "ttt_detective_karma_min",
+    "FieldName": "ttt_detective_karma_min",
+    "InputType": "number",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "600",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_detective_karma_min",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Traitor Start-Credits",
+    "Description": "Traitor Start-Credits  [ttt_credits_starting]",
+    "Keywords": "ttt_credits_starting",
+    "FieldName": "ttt_credits_starting",
+    "InputType": "number",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "2",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_credits_starting",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Credit-Bonus ab Anteil toter Innocents",
+    "Description": "Credit-Bonus ab Anteil toter Innocents  [ttt_credits_award_pct]",
+    "Keywords": "ttt_credits_award_pct",
+    "FieldName": "ttt_credits_award_pct",
+    "InputType": "text",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "0.35",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_credits_award_pct"
+  },
+  {
+    "DisplayName": "Credit-Bonus Größe",
+    "Description": "Credit-Bonus Größe  [ttt_credits_award_size]",
+    "Keywords": "ttt_credits_award_size",
+    "FieldName": "ttt_credits_award_size",
+    "InputType": "number",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_credits_award_size",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Credit-Bonus wiederholen",
+    "Description": "Credit-Bonus wiederholen  [ttt_credits_award_repeat]",
+    "Keywords": "ttt_credits_award_repeat",
+    "FieldName": "ttt_credits_award_repeat",
+    "InputType": "checkbox",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_credits_award_repeat",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Credits für Detective-Kill",
+    "Description": "Credits für Detective-Kill  [ttt_credits_detectivekill]",
+    "Keywords": "ttt_credits_detectivekill",
+    "FieldName": "ttt_credits_detectivekill",
+    "InputType": "number",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_credits_detectivekill",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Detective Start-Credits",
+    "Description": "Detective Start-Credits  [ttt_det_credits_starting]",
+    "Keywords": "ttt_det_credits_starting",
+    "FieldName": "ttt_det_credits_starting",
+    "InputType": "number",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_det_credits_starting",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Detective-Credits pro Traitor-Kill",
+    "Description": "Detective-Credits pro Traitor-Kill  [ttt_det_credits_traitorkill]",
+    "Keywords": "ttt_det_credits_traitorkill",
+    "FieldName": "ttt_det_credits_traitorkill",
+    "InputType": "number",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "0",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_det_credits_traitorkill",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Detective-Credits bei Traitor-Tod",
+    "Description": "Detective-Credits bei Traitor-Tod  [ttt_det_credits_traitordead]",
+    "Keywords": "ttt_det_credits_traitordead",
+    "FieldName": "ttt_det_credits_traitordead",
+    "InputType": "number",
+    "Category": "TTT – Rollen & Credits",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_det_credits_traitordead",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Karma-System",
+    "Description": "Karma-System  [ttt_karma]",
+    "Keywords": "ttt_karma",
+    "FieldName": "ttt_karma",
+    "InputType": "checkbox",
+    "Category": "TTT – Karma",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Striktes Karma",
+    "Description": "Striktes Karma  [ttt_karma_strict]",
+    "Keywords": "ttt_karma_strict",
+    "FieldName": "ttt_karma_strict",
+    "InputType": "checkbox",
+    "Category": "TTT – Karma",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_strict",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Start-Karma",
+    "Description": "Start-Karma  [ttt_karma_starting]",
+    "Keywords": "ttt_karma_starting",
+    "FieldName": "ttt_karma_starting",
+    "InputType": "number",
+    "Category": "TTT – Karma",
+    "DefaultValue": "1000",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_starting",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Max. Karma",
+    "Description": "Max. Karma  [ttt_karma_max]",
+    "Keywords": "ttt_karma_max",
+    "FieldName": "ttt_karma_max",
+    "InputType": "number",
+    "Category": "TTT – Karma",
+    "DefaultValue": "1000",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_max",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Schaden-Ratio",
+    "Description": "Schaden-Ratio  [ttt_karma_ratio]",
+    "Keywords": "ttt_karma_ratio",
+    "FieldName": "ttt_karma_ratio",
+    "InputType": "text",
+    "Category": "TTT – Karma",
+    "DefaultValue": "0.001",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_ratio"
+  },
+  {
+    "DisplayName": "Kill-Strafe",
+    "Description": "Kill-Strafe  [ttt_karma_kill_penalty]",
+    "Keywords": "ttt_karma_kill_penalty",
+    "FieldName": "ttt_karma_kill_penalty",
+    "InputType": "number",
+    "Category": "TTT – Karma",
+    "DefaultValue": "15",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_kill_penalty",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Karma pro Runde",
+    "Description": "Karma pro Runde  [ttt_karma_round_increment]",
+    "Keywords": "ttt_karma_round_increment",
+    "FieldName": "ttt_karma_round_increment",
+    "InputType": "number",
+    "Category": "TTT – Karma",
+    "DefaultValue": "5",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_round_increment",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Clean-Round-Bonus",
+    "Description": "Clean-Round-Bonus  [ttt_karma_clean_bonus]",
+    "Keywords": "ttt_karma_clean_bonus",
+    "FieldName": "ttt_karma_clean_bonus",
+    "InputType": "number",
+    "Category": "TTT – Karma",
+    "DefaultValue": "30",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_clean_bonus",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Bonus Traitor-Kill",
+    "Description": "Bonus Traitor-Kill  [ttt_karma_traitorkill_bonus]",
+    "Keywords": "ttt_karma_traitorkill_bonus",
+    "FieldName": "ttt_karma_traitorkill_bonus",
+    "InputType": "number",
+    "Category": "TTT – Karma",
+    "DefaultValue": "40",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_traitorkill_bonus",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Traitor-Schaden-Ratio",
+    "Description": "Traitor-Schaden-Ratio  [ttt_karma_traitordmg_ratio]",
+    "Keywords": "ttt_karma_traitordmg_ratio",
+    "FieldName": "ttt_karma_traitordmg_ratio",
+    "InputType": "text",
+    "Category": "TTT – Karma",
+    "DefaultValue": "0.0003",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_traitordmg_ratio"
+  },
+  {
+    "DisplayName": "Clean-Bonus Halbierung",
+    "Description": "Clean-Bonus Halbierung  [ttt_karma_clean_half]",
+    "Keywords": "ttt_karma_clean_half",
+    "FieldName": "ttt_karma_clean_half",
+    "InputType": "text",
+    "Category": "TTT – Karma",
+    "DefaultValue": "0.25",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_clean_half"
+  },
+  {
+    "DisplayName": "Auto-Kick bei niedrigem Karma",
+    "Description": "Auto-Kick bei niedrigem Karma  [ttt_karma_low_autokick]",
+    "Keywords": "ttt_karma_low_autokick",
+    "FieldName": "ttt_karma_low_autokick",
+    "InputType": "checkbox",
+    "Category": "TTT – Karma",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_low_autokick",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Karma-Grenze für Kick/Ban",
+    "Description": "Karma-Grenze für Kick/Ban  [ttt_karma_low_amount]",
+    "Keywords": "ttt_karma_low_amount",
+    "FieldName": "ttt_karma_low_amount",
+    "InputType": "number",
+    "Category": "TTT – Karma",
+    "DefaultValue": "450",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_low_amount",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Statt Kick bannen",
+    "Description": "Statt Kick bannen  [ttt_karma_low_ban]",
+    "Keywords": "ttt_karma_low_ban",
+    "FieldName": "ttt_karma_low_ban",
+    "InputType": "checkbox",
+    "Category": "TTT – Karma",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_low_ban",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Bandauer (Min.)",
+    "Description": "Bandauer (Min.)  [ttt_karma_low_ban_minutes]",
+    "Keywords": "ttt_karma_low_ban_minutes",
+    "FieldName": "ttt_karma_low_ban_minutes",
+    "InputType": "number",
+    "Category": "TTT – Karma",
+    "DefaultValue": "60",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_low_ban_minutes",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Karma speichern",
+    "Description": "Karma speichern  [ttt_karma_persist]",
+    "Keywords": "ttt_karma_persist",
+    "FieldName": "ttt_karma_persist",
+    "InputType": "checkbox",
+    "Category": "TTT – Karma",
+    "DefaultValue": "0",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_karma_persist",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Voice-Drain",
+    "Description": "Voice-Drain  [ttt_voice_drain]",
+    "Keywords": "ttt_voice_drain",
+    "FieldName": "ttt_voice_drain",
+    "InputType": "checkbox",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "0",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_voice_drain",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Voice-Drain normal",
+    "Description": "Voice-Drain normal  [ttt_voice_drain_normal]",
+    "Keywords": "ttt_voice_drain_normal",
+    "FieldName": "ttt_voice_drain_normal",
+    "InputType": "text",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "0.2",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_voice_drain_normal"
+  },
+  {
+    "DisplayName": "Voice-Drain Admin",
+    "Description": "Voice-Drain Admin  [ttt_voice_drain_admin]",
+    "Keywords": "ttt_voice_drain_admin",
+    "FieldName": "ttt_voice_drain_admin",
+    "InputType": "text",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "0.05",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_voice_drain_admin"
+  },
+  {
+    "DisplayName": "Voice-Recharge",
+    "Description": "Voice-Recharge  [ttt_voice_drain_recharge]",
+    "Keywords": "ttt_voice_drain_recharge",
+    "FieldName": "ttt_voice_drain_recharge",
+    "InputType": "text",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "0.05",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_voice_drain_recharge"
+  },
+  {
+    "DisplayName": "Positionsabhängige Voice",
+    "Description": "Positionsabhängige Voice  [ttt_locational_voice]",
+    "Keywords": "ttt_locational_voice",
+    "FieldName": "ttt_locational_voice",
+    "InputType": "checkbox",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "0",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_locational_voice",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Kick bei Namenswechsel",
+    "Description": "Kick bei Namenswechsel  [ttt_namechange_kick]",
+    "Keywords": "ttt_namechange_kick",
+    "FieldName": "ttt_namechange_kick",
+    "InputType": "checkbox",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_namechange_kick",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Ban bei Namenswechsel (Min.)",
+    "Description": "Ban bei Namenswechsel (Min.)  [ttt_namechange_bantime]",
+    "Keywords": "ttt_namechange_bantime",
+    "FieldName": "ttt_namechange_bantime",
+    "InputType": "number",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "10",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_namechange_bantime",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Dying Shot",
+    "Description": "Dying Shot  [ttt_dyingshot]",
+    "Keywords": "ttt_dyingshot",
+    "FieldName": "ttt_dyingshot",
+    "InputType": "checkbox",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "0",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_dyingshot",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "DNA-Reichweite",
+    "Description": "DNA-Reichweite  [ttt_killer_dna_range]",
+    "Keywords": "ttt_killer_dna_range",
+    "FieldName": "ttt_killer_dna_range",
+    "InputType": "number",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "550",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_killer_dna_range",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "DNA-Haltbarkeit (Sek.)",
+    "Description": "DNA-Haltbarkeit (Sek.)  [ttt_killer_dna_basetime]",
+    "Keywords": "ttt_killer_dna_basetime",
+    "FieldName": "ttt_killer_dna_basetime",
+    "InputType": "number",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "100",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_killer_dna_basetime",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Tragereichweite",
+    "Description": "Tragereichweite  [ttt_weapon_carrying_range]",
+    "Keywords": "ttt_weapon_carrying_range",
+    "FieldName": "ttt_weapon_carrying_range",
+    "InputType": "number",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "50",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_weapon_carrying_range",
+    "minValue": "0",
+    "maxValue": "100000"
+  },
+  {
+    "DisplayName": "Telefrags",
+    "Description": "Telefrags  [ttt_teleport_telefrags]",
+    "Keywords": "ttt_teleport_telefrags",
+    "FieldName": "ttt_teleport_telefrags",
+    "InputType": "checkbox",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "0",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_teleport_telefrags",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Ragdoll-Pinning",
+    "Description": "Ragdoll-Pinning  [ttt_ragdoll_pinning]",
+    "Keywords": "ttt_ragdoll_pinning",
+    "FieldName": "ttt_ragdoll_pinning",
+    "InputType": "checkbox",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_ragdoll_pinning",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Ragdoll-Pinning Innocents",
+    "Description": "Ragdoll-Pinning Innocents  [ttt_ragdoll_pinning_innocents]",
+    "Keywords": "ttt_ragdoll_pinning_innocents",
+    "FieldName": "ttt_ragdoll_pinning_innocents",
+    "InputType": "checkbox",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "0",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_ragdoll_pinning_innocents",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Weapon-Spawn-Skripte nutzen",
+    "Description": "Weapon-Spawn-Skripte nutzen  [ttt_use_weapon_spawn_scripts]",
+    "Keywords": "ttt_use_weapon_spawn_scripts",
+    "FieldName": "ttt_use_weapon_spawn_scripts",
+    "InputType": "checkbox",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_use_weapon_spawn_scripts",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Detective-Hüte",
+    "Description": "Detective-Hüte  [ttt_detective_hats]",
+    "Keywords": "ttt_detective_hats",
+    "FieldName": "ttt_detective_hats",
+    "InputType": "checkbox",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_detective_hats",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Playermodel erzwingen",
+    "Description": "Playermodel erzwingen  [ttt_enforce_playermodel]",
+    "Keywords": "ttt_enforce_playermodel",
+    "FieldName": "ttt_enforce_playermodel",
+    "InputType": "checkbox",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_enforce_playermodel",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "Bots als Spectator",
+    "Description": "Bots als Spectator  [ttt_bots_are_spectators]",
+    "Keywords": "ttt_bots_are_spectators",
+    "FieldName": "ttt_bots_are_spectators",
+    "InputType": "checkbox",
+    "Category": "TTT – Sonstiges",
+    "DefaultValue": "0",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "ttt_bots_are_spectators",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    }
+  },
+  {
+    "DisplayName": "C4",
+    "Description": "Wer kann „C4“ im Shop kaufen? [weapon_ttt_c4]",
+    "Keywords": "shop_weapon_ttt_c4",
+    "FieldName": "shop_weapon_ttt_c4",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_c4",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Flare Gun",
+    "Description": "Wer kann „Flare Gun“ im Shop kaufen? [weapon_ttt_flaregun]",
+    "Keywords": "shop_weapon_ttt_flaregun",
+    "FieldName": "shop_weapon_ttt_flaregun",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_flaregun",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Messer",
+    "Description": "Wer kann „Messer“ im Shop kaufen? [weapon_ttt_knife]",
+    "Keywords": "shop_weapon_ttt_knife",
+    "FieldName": "shop_weapon_ttt_knife",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_knife",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Poltergeist",
+    "Description": "Wer kann „Poltergeist“ im Shop kaufen? [weapon_ttt_phammer]",
+    "Keywords": "shop_weapon_ttt_phammer",
+    "FieldName": "shop_weapon_ttt_phammer",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_phammer",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Newton Launcher",
+    "Description": "Wer kann „Newton Launcher“ im Shop kaufen? [weapon_ttt_push]",
+    "Keywords": "shop_weapon_ttt_push",
+    "FieldName": "shop_weapon_ttt_push",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_push",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Radio",
+    "Description": "Wer kann „Radio“ im Shop kaufen? [weapon_ttt_radio]",
+    "Keywords": "shop_weapon_ttt_radio",
+    "FieldName": "shop_weapon_ttt_radio",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_radio",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Schalldämpfer-Pistole",
+    "Description": "Wer kann „Schalldämpfer-Pistole“ im Shop kaufen? [weapon_ttt_sipistol]",
+    "Keywords": "shop_weapon_ttt_sipistol",
+    "FieldName": "shop_weapon_ttt_sipistol",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_sipistol",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Teleporter",
+    "Description": "Wer kann „Teleporter“ im Shop kaufen? [weapon_ttt_teleport]",
+    "Keywords": "shop_weapon_ttt_teleport",
+    "FieldName": "shop_weapon_ttt_teleport",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_teleport",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Decoy",
+    "Description": "Wer kann „Decoy“ im Shop kaufen? [weapon_ttt_decoy]",
+    "Keywords": "shop_weapon_ttt_decoy",
+    "FieldName": "shop_weapon_ttt_decoy",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_decoy",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Heilstation",
+    "Description": "Wer kann „Heilstation“ im Shop kaufen? [weapon_ttt_health_station]",
+    "Keywords": "shop_weapon_ttt_health_station",
+    "FieldName": "shop_weapon_ttt_health_station",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_health_station",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Fernglas",
+    "Description": "Wer kann „Fernglas“ im Shop kaufen? [weapon_ttt_binoculars]",
+    "Keywords": "shop_weapon_ttt_binoculars",
+    "FieldName": "shop_weapon_ttt_binoculars",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_binoculars",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Defuser",
+    "Description": "Wer kann „Defuser“ im Shop kaufen? [weapon_ttt_defuser]",
+    "Keywords": "shop_weapon_ttt_defuser",
+    "FieldName": "shop_weapon_ttt_defuser",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_defuser",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Visualizer",
+    "Description": "Wer kann „Visualizer“ im Shop kaufen? [weapon_ttt_cse]",
+    "Keywords": "shop_weapon_ttt_cse",
+    "FieldName": "shop_weapon_ttt_cse",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_cse",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "UMP Prototype",
+    "Description": "Wer kann „UMP Prototype“ im Shop kaufen? [weapon_ttt_stungun]",
+    "Keywords": "shop_weapon_ttt_stungun",
+    "FieldName": "shop_weapon_ttt_stungun",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_stungun",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "DNA-Scanner",
+    "Description": "Wer kann „DNA-Scanner“ im Shop kaufen? [weapon_ttt_wtester]",
+    "Keywords": "shop_weapon_ttt_wtester",
+    "FieldName": "shop_weapon_ttt_wtester",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_wtester",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Discombobulator",
+    "Description": "Wer kann „Discombobulator“ im Shop kaufen? [weapon_ttt_confgrenade]",
+    "Keywords": "shop_weapon_ttt_confgrenade",
+    "FieldName": "shop_weapon_ttt_confgrenade",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_confgrenade",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Rauchgranate",
+    "Description": "Wer kann „Rauchgranate“ im Shop kaufen? [weapon_ttt_smokegrenade]",
+    "Keywords": "shop_weapon_ttt_smokegrenade",
+    "FieldName": "shop_weapon_ttt_smokegrenade",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_smokegrenade",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Brandgranate",
+    "Description": "Wer kann „Brandgranate“ im Shop kaufen? [weapon_zm_molotov]",
+    "Keywords": "shop_weapon_zm_molotov",
+    "FieldName": "shop_weapon_zm_molotov",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_zm_molotov",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "M16",
+    "Description": "Wer kann „M16“ im Shop kaufen? [weapon_ttt_m16]",
+    "Keywords": "shop_weapon_ttt_m16",
+    "FieldName": "shop_weapon_ttt_m16",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_m16",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "MAC10",
+    "Description": "Wer kann „MAC10“ im Shop kaufen? [weapon_zm_mac10]",
+    "Keywords": "shop_weapon_zm_mac10",
+    "FieldName": "shop_weapon_zm_mac10",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_zm_mac10",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Scout-Gewehr",
+    "Description": "Wer kann „Scout-Gewehr“ im Shop kaufen? [weapon_zm_rifle]",
+    "Keywords": "shop_weapon_zm_rifle",
+    "FieldName": "shop_weapon_zm_rifle",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_zm_rifle",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Shotgun",
+    "Description": "Wer kann „Shotgun“ im Shop kaufen? [weapon_zm_shotgun]",
+    "Keywords": "shop_weapon_zm_shotgun",
+    "FieldName": "shop_weapon_zm_shotgun",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_zm_shotgun",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "H.U.G.E.-249",
+    "Description": "Wer kann „H.U.G.E.-249“ im Shop kaufen? [weapon_zm_sledge]",
+    "Keywords": "shop_weapon_zm_sledge",
+    "FieldName": "shop_weapon_zm_sledge",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_zm_sledge",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Deagle",
+    "Description": "Wer kann „Deagle“ im Shop kaufen? [weapon_zm_revolver]",
+    "Keywords": "shop_weapon_zm_revolver",
+    "FieldName": "shop_weapon_zm_revolver",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_zm_revolver",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Five-seveN",
+    "Description": "Wer kann „Five-seveN“ im Shop kaufen? [weapon_zm_pistol]",
+    "Keywords": "shop_weapon_zm_pistol",
+    "FieldName": "shop_weapon_zm_pistol",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_zm_pistol",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Glock",
+    "Description": "Wer kann „Glock“ im Shop kaufen? [weapon_ttt_glock]",
+    "Keywords": "shop_weapon_ttt_glock",
+    "FieldName": "shop_weapon_ttt_glock",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_weapon_ttt_glock",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Item: Körperpanzer",
+    "Description": "Wer kann „Körperpanzer“ kaufen? [item_armor]",
+    "Keywords": "shop_item_armor",
+    "FieldName": "shop_item_armor",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_item_armor",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Item: Radar",
+    "Description": "Wer kann „Radar“ kaufen? [item_radar]",
+    "Keywords": "shop_item_radar",
+    "FieldName": "shop_item_radar",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_item_radar",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Item: Disguiser",
+    "Description": "Wer kann „Disguiser“ kaufen? [item_disguiser]",
+    "Keywords": "shop_item_disguiser",
+    "FieldName": "shop_item_disguiser",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Shop",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "shop_item_disguiser",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "none": "Nicht im Shop",
+      "traitor": "Nur Traitor",
+      "detective": "Nur Detective",
+      "both": "Traitor + Detective"
+    }
+  },
+  {
+    "DisplayName": "Discombobulator",
+    "Description": "Zufälliger Boden-Spawn für „Discombobulator“. [weapon_ttt_confgrenade]",
+    "Keywords": "floor_weapon_ttt_confgrenade",
+    "FieldName": "floor_weapon_ttt_confgrenade",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Boden-Spawn",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "floor_weapon_ttt_confgrenade",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "on": "Spawnt auf der Map",
+      "off": "Spawnt NICHT"
+    }
+  },
+  {
+    "DisplayName": "Rauchgranate",
+    "Description": "Zufälliger Boden-Spawn für „Rauchgranate“. [weapon_ttt_smokegrenade]",
+    "Keywords": "floor_weapon_ttt_smokegrenade",
+    "FieldName": "floor_weapon_ttt_smokegrenade",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Boden-Spawn",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "floor_weapon_ttt_smokegrenade",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "on": "Spawnt auf der Map",
+      "off": "Spawnt NICHT"
+    }
+  },
+  {
+    "DisplayName": "Brandgranate",
+    "Description": "Zufälliger Boden-Spawn für „Brandgranate“. [weapon_zm_molotov]",
+    "Keywords": "floor_weapon_zm_molotov",
+    "FieldName": "floor_weapon_zm_molotov",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Boden-Spawn",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "floor_weapon_zm_molotov",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "on": "Spawnt auf der Map",
+      "off": "Spawnt NICHT"
+    }
+  },
+  {
+    "DisplayName": "M16",
+    "Description": "Zufälliger Boden-Spawn für „M16“. [weapon_ttt_m16]",
+    "Keywords": "floor_weapon_ttt_m16",
+    "FieldName": "floor_weapon_ttt_m16",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Boden-Spawn",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "floor_weapon_ttt_m16",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "on": "Spawnt auf der Map",
+      "off": "Spawnt NICHT"
+    }
+  },
+  {
+    "DisplayName": "MAC10",
+    "Description": "Zufälliger Boden-Spawn für „MAC10“. [weapon_zm_mac10]",
+    "Keywords": "floor_weapon_zm_mac10",
+    "FieldName": "floor_weapon_zm_mac10",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Boden-Spawn",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "floor_weapon_zm_mac10",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "on": "Spawnt auf der Map",
+      "off": "Spawnt NICHT"
+    }
+  },
+  {
+    "DisplayName": "Scout-Gewehr",
+    "Description": "Zufälliger Boden-Spawn für „Scout-Gewehr“. [weapon_zm_rifle]",
+    "Keywords": "floor_weapon_zm_rifle",
+    "FieldName": "floor_weapon_zm_rifle",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Boden-Spawn",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "floor_weapon_zm_rifle",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "on": "Spawnt auf der Map",
+      "off": "Spawnt NICHT"
+    }
+  },
+  {
+    "DisplayName": "Shotgun",
+    "Description": "Zufälliger Boden-Spawn für „Shotgun“. [weapon_zm_shotgun]",
+    "Keywords": "floor_weapon_zm_shotgun",
+    "FieldName": "floor_weapon_zm_shotgun",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Boden-Spawn",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "floor_weapon_zm_shotgun",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "on": "Spawnt auf der Map",
+      "off": "Spawnt NICHT"
+    }
+  },
+  {
+    "DisplayName": "H.U.G.E.-249",
+    "Description": "Zufälliger Boden-Spawn für „H.U.G.E.-249“. [weapon_zm_sledge]",
+    "Keywords": "floor_weapon_zm_sledge",
+    "FieldName": "floor_weapon_zm_sledge",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Boden-Spawn",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "floor_weapon_zm_sledge",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "on": "Spawnt auf der Map",
+      "off": "Spawnt NICHT"
+    }
+  },
+  {
+    "DisplayName": "Deagle",
+    "Description": "Zufälliger Boden-Spawn für „Deagle“. [weapon_zm_revolver]",
+    "Keywords": "floor_weapon_zm_revolver",
+    "FieldName": "floor_weapon_zm_revolver",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Boden-Spawn",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "floor_weapon_zm_revolver",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "on": "Spawnt auf der Map",
+      "off": "Spawnt NICHT"
+    }
+  },
+  {
+    "DisplayName": "Five-seveN",
+    "Description": "Zufälliger Boden-Spawn für „Five-seveN“. [weapon_zm_pistol]",
+    "Keywords": "floor_weapon_zm_pistol",
+    "FieldName": "floor_weapon_zm_pistol",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Boden-Spawn",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "floor_weapon_zm_pistol",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "on": "Spawnt auf der Map",
+      "off": "Spawnt NICHT"
+    }
+  },
+  {
+    "DisplayName": "Glock",
+    "Description": "Zufälliger Boden-Spawn für „Glock“. [weapon_ttt_glock]",
+    "Keywords": "floor_weapon_ttt_glock",
+    "FieldName": "floor_weapon_ttt_glock",
+    "InputType": "enum",
+    "Category": "TTT – Waffen: Boden-Spawn",
+    "DefaultValue": "default",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "floor_weapon_ttt_glock",
+    "EnumValues": {
+      "default": "Standard (unverändert)",
+      "on": "Spawnt auf der Map",
+      "off": "Spawnt NICHT"
+    }
+  },
+  {
+    "DisplayName": "Workshop-Waffen im Shop",
+    "Description": "Klasse:Modus, kommagetrennt. Modus = none|traitor|detective|both. Z.B. weapon_ttt_foo:traitor,weapon_ttt_bar:both",
+    "Keywords": "custom_shop",
+    "FieldName": "custom_shop",
+    "InputType": "text",
+    "Category": "TTT – Waffen: Custom",
+    "DefaultValue": "",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "custom_shop"
+  },
+  {
+    "DisplayName": "Workshop-Waffen am Boden",
+    "Description": "Klasse:Modus, kommagetrennt. Modus = on|off. Z.B. weapon_ttt_foo:on",
+    "Keywords": "custom_floor",
+    "FieldName": "custom_floor",
+    "InputType": "text",
+    "Category": "TTT – Waffen: Custom",
+    "DefaultValue": "",
+    "IncludeInCommandLine": false,
+    "Hidden": false,
+    "ParamFieldName": "custom_floor"
+  }
+]
